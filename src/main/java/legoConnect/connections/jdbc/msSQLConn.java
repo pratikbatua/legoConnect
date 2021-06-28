@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import legoConnect.connections.connProps;
 import legoConnect.connections.jdbc.jdbcConn;;
 
 public class msSQLConn extends jdbcConn
@@ -11,6 +12,11 @@ public class msSQLConn extends jdbcConn
 	public msSQLConn(String host,int port,String dbName,String user,String pwd)
 	{
 		super(host,port,dbName, user, pwd);
+	}
+	
+	public msSQLConn(connProps props)
+	{
+		this(props.getHost(),props.getPort(),props.getDataObj(), props.getUser(), props.getPwd());
 	}
 	
 	public void loadDriver() {

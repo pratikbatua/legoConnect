@@ -1,0 +1,5 @@
+1.0_A0.1 2021.06.28
+- End to end query support for mssql
+
+1.0_A0 2021.06.26
+- First cut 

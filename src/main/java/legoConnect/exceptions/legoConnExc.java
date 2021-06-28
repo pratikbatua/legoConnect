@@ -1,3 +1,7 @@
+/*
+ * pratik Batua
+ */
+
 package legoConnect.exceptions;
 
 public class legoConnExc extends legoExc

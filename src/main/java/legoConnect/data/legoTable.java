@@ -1,8 +1,12 @@
+/*
+ * pratik Batua
+ */
+
 package legoConnect.data;
 
 import java.util.ArrayList;
 
-public interface legoTable extends legoDataObject , Iterable<legoRow>
+public interface legoTable extends baseDataObj , Iterable<legoRow>
 {
 	String[] getColNames();
 	int getColIndex(String colName);
