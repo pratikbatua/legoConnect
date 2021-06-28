@@ -16,7 +16,7 @@ public class msSQLConn extends jdbcConn
 	
 	public msSQLConn(connProps props)
 	{
-		this(props.getHost(),props.getPort(),props.getDataObj(), props.getUser(), props.getPwd());
+		this(props.getHost(),props.getPort(),props.getDataStore(), props.getUser(), props.getPwd());
 	}
 	
 	public void loadDriver() {

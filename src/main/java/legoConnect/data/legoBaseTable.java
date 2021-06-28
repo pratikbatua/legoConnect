@@ -55,6 +55,21 @@ public abstract class legoBaseTable implements legoTable
 	}
 	
 	@Override
+	public ArrayList getCol(String colName) {
+		return (ArrayList) this.data[this.colMap.get(colName)];
+	}
+
+	@Override
+	public Object get(int row,String col) {
+		return this.getCol(col).get(row);
+	}	
+	
+	@Override
+	public Object get(int row, int col) {
+		return this.data[col].get(row);
+	}
+	
+	@Override
 	public Iterator<legoRow> iterator()
 	{
 		return new legoTableIterator(this);
@@ -69,7 +84,12 @@ public abstract class legoBaseTable implements legoTable
 	@Override
 	public String toString()
 	{
-		StringBuilder b = new StringBuilder();
-		return b.toString();
+		StringBuilder sb = new StringBuilder();
+		Iterator<legoRow> itr = this.iterator();
+		while(itr.hasNext())
+		{
+			sb.append(itr.next());
+		}
+		return sb.toString();
 	}
 }

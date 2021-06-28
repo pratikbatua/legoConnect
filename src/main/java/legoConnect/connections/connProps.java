@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class connProps {	
 	
-	private String user,pwd,host,dataObj;
+	private String user,pwd,host,dataStore;
 	private connType conntype;
 	int port;
 	
@@ -57,19 +57,19 @@ public class connProps {
 		return this.custom.get(key);
 	}
 
-	public String getDataObj() {
-		return dataObj;
-	}
-
-	public void setDataObj(String dataObj) {
-		this.dataObj = dataObj;
-	}
-
 	public connType getConnType() {
 		return conntype;
 	}
 
 	public void setConnType(connType conntype) {
 		this.conntype = conntype;
+	}
+
+	public String getDataStore() {
+		return dataStore;
+	}
+
+	public void setDataStore(String dataStore) {
+		this.dataStore = dataStore;
 	}
 }
